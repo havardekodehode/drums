@@ -1,3 +1,10 @@
+:root {
+    --color-primary: #231942;   /* Example primary color */
+    --color-secondary: #5E548E; /* Example secondary color */
+    --color-accent: #9F86C0;    /* Example accent color */
+    --color-text: #BE95C4;      /* Example text color */
+    --color-background: #E0B1CB; /* Example background color */
+  }
 html{
     min-width: 350px;
 }
@@ -9,7 +16,7 @@ body{
     justify-content: center;
     align-content: end;
     flex-wrap: wrap;
-    background-color: #f0f0f0;
+    background-color: var(--color-background);
 }
 
 
@@ -30,7 +37,6 @@ main{
 }
 
 .buttonContainerWKey{
-    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -57,16 +63,46 @@ main{
     width: 60px;
 }
 
+.key{
+    display: none;
+}
 
 
+/* Media queries */
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1340px) {
     .goats{
         gap: 60px;
         width: 90vw;
-        margin-bottom: 6%;
+        /* margin-bottom: 6%; */
     }
-    .desktopKey {
+
+    .key{
         display: block;
+    }
+
+    .keyboard{
+        width: 90vw;
+        height: 230px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .keyboardKey{
+        height: 100px;
+        width: 100px;
+        border-radius: 20px;
+        border: solid 5px #1d1d1d;
+        background-color: #5a5a5a;
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 40px;
+    }
+
+    h1{
+        text-shadow: 5px 5px 1px #1d1d1d ;
     }
 }

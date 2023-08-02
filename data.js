@@ -1,5 +1,5 @@
-export const goats = [
-    
+export const drum = [
+    [
         {
             goat: "goat1",
             image: "images/goat1.png",
@@ -54,6 +54,66 @@ export const goats = [
             sound: "sounds/sound9.mp3",
             key: "l"
         }
+    ],[
+
+            {
+                drum: "drum1",
+                image: "images/drum1.png",
+                sound: "sounds/sound1.mp3",
+                key: "s"
+            },
+            {
+                drum: "drum2",
+                image: "images/drum2.png",
+                sound: "sounds/sound2.mp3",
+                key: "d"
+            },
+            {
+                drum: "drum3",
+                image: "images/drum3.png",
+                sound: "sounds/sound3.mp3",
+                key: "f"
+            },
+            {
+                drum: "drum4",
+                image: "images/drum4.png",
+                sound: "sounds/sound4.mp3",
+                key: "g"
+            },
+            {
+                drum: "drum5",
+                image: "images/drum5.png",
+                sound: "sounds/sound5.mp3",
+                key: "h"
+            },
+            {
+                drum: "drum6",
+                image: "images/drum6.png",
+                sound: "sounds/sound6.mp3",
+                key: "i"
+            },
+            {
+                drum: "drum7",
+                image: "images/drum7.png",
+                sound: "sounds/sound7.mp3",
+                key: "j"
+            },
+            {
+                drum: "drum8",
+                image: "images/drum8.png",
+                sound: "sounds/sound8.mp3",
+                key: "k"
+            },
+            {
+                drum: "drum9",
+                image: "images/drum9.png",
+                sound: "sounds/sound9.mp3",
+                key: "l"
+            }
+        
+        
+    ]
     
-    
+        
 ];
+
