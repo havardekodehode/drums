@@ -2,62 +2,45 @@ import { goats } from "./data.js";
 
 const mainEl = document.getElementById("main");
 
-const audioPlayer = new Audio;
+async function play(goat, container){
+    const delay = ms => new Promise(res => setTimeout(res, ms));
 
-// document.addEventListener("click",(e)=>{
-//     if(e.target.dataset === )
-//     switch (e.target.dataset.property) {
-//         case "image1":
-//             console.log("white goat");
-//             // audioPlayer.scr = 
-//             break;
-//         case "image2":
-//             console.log("brown goat");
-
-//             break;
-//         case  "image3":
-            
-//             break;
-//         case "image4":
-            
-//             break;
-//         case "image5":
-            
-//             break;
-//         case "image6":
-            
-//             break;
-//         case "image7":
-            
-//             break;
-//         case "image8":
-            
-//             break;
-//         case "image9":
-            
-//             break;
-    
-//         default:
-//             break;
-//     }
-// })
+    const audioPlayer = new Audio;
+    audioPlayer.src=goat.sound
+    audioPlayer.play()
+    container.style.backgroundColor="red"
+    await delay(1000);
+    container.style.backgroundColor="black"
+}
 
 function render(){
     const goatContainer = document.createElement("div")
     goatContainer.classList = "goats"
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+
 
     goats.forEach(goat => {
+        const containerWKey = document.createElement("div")
+        containerWKey.classList= "buttonContainerWKey"
+        const container = document.createElement("div")
+        container.classList= "buttonContainer"
+        const dekstopKey = document.createElement("div")
+        dekstopKey.classList = "dekstopKey"
+        dekstopKey.textContent = goat.key
+        dekstopKey.style.display = "none"
         const goatButton = document.createElement("button")
         goatButton.classList = "goatButton"
         goatButton.style.backgroundImage = `url(${goat.image})`
         goatButton.dataset.property = goat.goat
 
-        goatButton.addEventListener("click",()=>{
-            audioPlayer.src=goat.sound
-            audioPlayer.play()
-        })
+        goatButton.addEventListener("click",()=>play(goat, container))
+        document.addEventListener("keypress", async(e) => e.key === goat.key?play(goat, container):null);
 
-        goatContainer.append(goatButton)
+
+
+        container.append(goatButton)
+        containerWKey.append(container, dekstopKey)
+        goatContainer.append(containerWKey)
     });
 
     mainEl.append(goatContainer)
