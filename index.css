@@ -1,33 +1,60 @@
 :root {
-    --color-primary: #231942;   /* Example primary color */
-    --color-secondary: #5E548E; /* Example secondary color */
-    --color-accent: #9F86C0;    /* Example accent color */
-    --color-text: #BE95C4;      /* Example text color */
-    --color-background: #E0B1CB; /* Example background color */
-  }
-html{
+    --color-primary: #231942; /* Example primary color */
+    --color-secondary: #5e548e; /* Example secondary color */
+    --color-accent: #9f86c0; /* Example accent color */
+    --color-text: #be95c4; /* Example text color */
+    --color-background: #e0b1cb; /* Example background color */
+}
+html {
     min-width: 350px;
 }
-body{
+body {
     margin: 0;
     min-width: 100%;
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-content: end;
-    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
     background-color: var(--color-background);
 }
 
-
-
-main{
-    /* height: 100%; */
-    /* height: 100vh;; */
-  
+.toggles {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin: 20px 20px 0px 0px;
 }
 
-.buttonContainer{
+.toggles img {
+    height: 40px;
+    width: 56px;
+}
+
+.toggles input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggles input + img {
+    cursor: pointer;
+}
+
+.toggles input:checked + img {
+    outline: 3px solid #1d1d1d;
+}
+
+main {
+    /* height: 100%; */
+    /* height: 100vh;; */
+    display: flex;
+    justify-content: center;
+    align-content: end;
+    flex-wrap: wrap;
+}
+
+.buttonContainer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -36,7 +63,7 @@ main{
     background-color: black;
 }
 
-.buttonContainerWKey{
+.buttonContainerWKey {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -45,8 +72,7 @@ main{
     height: 80px; */
 }
 
-.goats{
-    
+.goats {
     width: 70vw;
     display: flex;
     flex-wrap: wrap;
@@ -56,45 +82,49 @@ main{
     padding-bottom: 100px;
 }
 
-.goatButton{
+.goatButton {
     border: none;
     background-size: cover;
     height: 60px;
     width: 60px;
 }
 
-.key{
+.key {
     display: none;
 }
 
+.keyboard {
+    display: none;
+}
 
 /* Media queries */
 
 @media screen and (min-width: 1340px) {
-    .goats{
+    .goats {
         gap: 60px;
         width: 90vw;
         /* margin-bottom: 6%; */
     }
 
-    .key{
+    .key {
         display: block;
     }
 
-    .keyboard{
+    .keyboard {
         width: 90vw;
         height: 230px;
         display: flex;
         justify-content: center;
         align-items: center;
+        gap: 40px;
     }
 
-    .keyboardKey{
+    .keyboardKey {
         height: 100px;
         width: 100px;
         border-radius: 20px;
         border: solid 5px #1d1d1d;
-        background-color: #5a5a5a;
+        background-color: gray;
         color: whitesmoke;
         display: flex;
         justify-content: center;
@@ -102,7 +132,13 @@ main{
         font-size: 40px;
     }
 
-    h1{
-        text-shadow: 5px 5px 1px #1d1d1d ;
+    h1 {
+        text-shadow: 5px 5px 1px #1d1d1d;
+    }
+
+    .left,
+    .right {
+        display: flex;
+        gap: 2px;
     }
 }
