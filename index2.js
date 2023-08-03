@@ -17,19 +17,37 @@ function createElements(data, type) {
     // const goatContainer = document.createElement("div");
     // goatContainer.classList = name;
 
+    // function playSound() {
+    //     console.log("ææææææ");
+    //     const audioPlayer = new Audio();
+    //     audioPlayer.scr = "sounds/sound1.mp3";
+    //     audioPlayer.play();
+    // }
+
     if (type === "drums") {
         const div = document.createElement("div");
+        const imgContainer = document.createElement("div");
         div.classList = "drums";
         const img = document.createElement("img");
         img.src = "images/drumSet.png";
-        div.append(img);
+        const btn = document.createElement("button");
+        btn.classList = "test";
+        btn.dataset.property = "sound1";
+        btn.addEventListener("click", () => {
+            // console.log("AAbbcc");
+            const audioPlayer = new Audio();
+            audioPlayer.src = "sounds/drumsound1.wav";
+            audioPlayer.play();
+        });
+        imgContainer.append(img);
+        div.append(imgContainer, btn);
         return div;
     } else {
-        const goat = document.createElement("div");
-        const container = document.createElement("div");
-        goat.classList = "goat";
+        const goats = document.createElement("div");
+        goats.classList = "goats";
 
         drum[0].forEach((goat) => {
+            const container = document.createElement("div");
             const buttonContainer = document.createElement("div");
             const goatButton = document.createElement("button");
             const key = document.createElement("div");
@@ -42,9 +60,9 @@ function createElements(data, type) {
             key.classList = "key";
             buttonContainer.append(goatButton);
             container.append(buttonContainer, key);
+            goats.append(container);
         });
-        goat.append(container);
-        return goat;
+        return goats;
         // data.forEach((goat) => {});
     }
 }
