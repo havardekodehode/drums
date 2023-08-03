@@ -39,19 +39,23 @@ function createKeys() {
     let keys = document.querySelectorAll(".keyboardKey");
 
     const keyboardLeft = ["a", "s", "d", "f"];
-    const keyboardRight = ["j", "k", "l", "ø"];
-    const KBKey = document.createElement("div");
-    KBKey.classList = "keyboardKey";
+    const keyboardRight = ["j", "k", "l", "ø", "æ"];
     keyboardLeft.forEach((key) => {
+        const KBKey = document.createElement("div");
+        KBKey.classList = "keyboardKey";
+        KBKey.id = `${key}Key`;
+
         KBKey.append((document.createElement("h1").textContent = key));
         left.append(KBKey);
     });
 
     keyboardRight.forEach((key) => {
+        const KBKey = document.createElement("div");
+        KBKey.classList = "keyboardKey";
+
         KBKey.append((document.createElement("h1").textContent = key));
         right.append(KBKey);
     });
-    console.log(right);
 
     keyboard.append(left, right);
     return keyboard;
@@ -60,7 +64,6 @@ function createKeys() {
 function render(data, drumtype) {
     if (drumtype === "drums") {
         // mainEl.innerHTML = "";
-        console.log(createKeys());
         mainEl.append(createElements(data, drumtype), createKeys());
     } else {
         mainEl.innerHTML = "";
