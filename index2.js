@@ -25,6 +25,26 @@ function createElements(data, type) {
         div.append(img);
         return div;
     } else {
+        const goat = document.createElement("div");
+        const container = document.createElement("div");
+        goat.classList = "goat";
+
+        drum[0].forEach((goat) => {
+            const buttonContainer = document.createElement("div");
+            const goatButton = document.createElement("button");
+            const key = document.createElement("div");
+            container.classList = "buttonContainerWKey";
+            buttonContainer.classList = "buttonContainer";
+            goatButton.classList = "goatButton";
+            goatButton.dataset.property = goat.goat;
+            goatButton.style.backgroundImage = `url(${goat.image})`;
+            key.textContent = goat.key;
+            key.classList = "key";
+            buttonContainer.append(goatButton);
+            container.append(buttonContainer, key);
+        });
+        goat.append(container);
+        return goat;
         // data.forEach((goat) => {});
     }
 }
@@ -62,12 +82,14 @@ function createKeys() {
 }
 
 function render(data, drumtype) {
+    mainEl.innerHTML = "";
     if (drumtype === "drums") {
         // mainEl.innerHTML = "";
+        console.log(createKeys);
         mainEl.append(createElements(data, drumtype), createKeys());
     } else {
         mainEl.innerHTML = "";
-        // mainEl.append(createElements(data, drumtype));
+        mainEl.append(createElements(data, drumtype), createKeys());
     }
 }
 
