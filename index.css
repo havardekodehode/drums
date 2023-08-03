@@ -33,8 +33,6 @@ body {
 .toggles input {
     position: absolute;
     opacity: 0;
-    width: 0;
-    height: 0;
 }
 
 .toggles input + img {
@@ -52,6 +50,15 @@ main {
     justify-content: center;
     align-content: end;
     flex-wrap: wrap;
+}
+
+.drums {
+    display: flex;
+}
+
+.drums img {
+    height: auto;
+    width: 400px;
 }
 
 .buttonContainer {
@@ -74,7 +81,7 @@ main {
 
 .goats {
     width: 70vw;
-    display: flex;
+    display: none;
     flex-wrap: wrap;
     gap: 30px;
     justify-content: center;

@@ -13,11 +13,14 @@ const radios = document.querySelectorAll('input[name="toggle"]');
 for (let i = 0; i < radios.length; i++) {
     radios[i].addEventListener("change", function () {
         let val = this.value;
-        console.log(val);
+        const drums = document.querySelector(".drums");
+        const goats = document.querySelector(".goats");
         if (val === "drums") {
-            console.log("drum");
+            drums.style.display = "flex";
+            goats.style.display = "none";
         } else if (val === "goats") {
-            console.log("goat");
+            goats.style.display = "flex";
+            drums.style.display = "none";
         }
     });
 }
@@ -76,7 +79,7 @@ function render(drum, name) {
             right.append(KBKey);
         }
 
-        goatButton.addEventListener("click", () => play(goat, container));
+        goatButton.addEventListener("click", play(goat, container));
         document.addEventListener("keypress", async (e) =>
             e.key === goat.key ? play(goat, container, e) : null
         );
