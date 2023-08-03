@@ -24,7 +24,7 @@ body {
     justify-content: flex-end;
     gap: 10px;
     margin: 20px 20px 0px 0px;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .toggles img {
@@ -58,8 +58,8 @@ main {
 
 .drums {
     display: flex;
+    /* width: 100%; */
     justify-content: center;
-    background-color: aquamarine;
 }
 
 .drums img {
@@ -67,17 +67,123 @@ main {
     width: 400px;
 }
 
-.test {
-    height: 50px;
-    width: 100px;
+.buttonsRelContainerdrum1 {
+    width: 0;
+    position: relative;
+    left: -100%;
+    top: 52%;
+}
+.buttonsRelContainerdrum2 {
+    width: 0;
+    position: relative;
+    left: -95%;
+    top: 28.5%;
+}
+.buttonsRelContainerdrum3 {
+    width: 0;
+    position: relative;
+    left: -79%;
+    top: 1%;
+}
+.buttonsRelContainerdrum4 {
+    width: 0;
+    position: relative;
+    left: -67%;
+    top: 22%;
+}
+.buttonsRelContainerdrum5 {
+    width: 0;
+    position: relative;
+    left: -70%;
+    top: 50%;
+}
+.buttonsRelContainerdrum6 {
+    width: 0;
+    position: relative;
+    left: -49%;
+    top: 24%;
+}
+.buttonsRelContainerdrum7 {
+    width: 0;
+    position: relative;
+    left: -41%;
+    top: 0.5%;
+}
+.buttonsRelContainerdrum8 {
+    width: 0;
+    position: relative;
+    left: -30%;
+    top: 36%;
+}
+.buttonsRelContainerdrum9 {
+    width: 0;
+    position: relative;
+    left: -37%;
+    top: 62%;
+}
+
+.drum1 {
+    height: 51px;
+    width: 110px;
     border-radius: 70px;
     transform: rotate(350deg);
     background-color: #1d1d1d;
-    position: relative;
-    left: -79%;
-    top: 52%;
-    opacity: 0;
-    /* visibility: hidden; */
+}
+.drum2 {
+    height: 51px;
+    width: 110px;
+    border-radius: 70px;
+    transform: rotate(350deg);
+    background-color: #1d1d1d;
+}
+.drum3 {
+    height: 51px;
+    width: 80px;
+    border-radius: 70px;
+    transform: rotate(350deg);
+    background-color: #1d1d1d;
+}
+.drum4 {
+    height: 51px;
+    width: 70px;
+    border-radius: 70px;
+    transform: rotate(350deg);
+    background-color: #1d1d1d;
+}
+.drum5 {
+    height: 41px;
+    width: 75px;
+    border-radius: 70px;
+    transform: rotate(360deg);
+    background-color: #1d1d1d;
+}
+.drum6 {
+    height: 41px;
+    width: 70px;
+    border-radius: 70px;
+    transform: rotate(370deg);
+    background-color: #1d1d1d;
+}
+.drum7 {
+    height: 46px;
+    width: 95px;
+    border-radius: 70px;
+    transform: rotate(360deg);
+    background-color: #1d1d1d;
+}
+.drum8 {
+    height: 51px;
+    width: 120px;
+    border-radius: 70px;
+    transform: rotate(382deg);
+    background-color: #1d1d1d;
+}
+.drum9 {
+    height: 35px;
+    width: 80px;
+    border-radius: 70px;
+    transform: rotate(380deg);
+    background-color: #1d1d1d;
 }
 
 .buttonContainer {

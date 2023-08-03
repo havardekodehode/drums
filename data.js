@@ -57,39 +57,48 @@ export const drum = [
     ],
     [
         {
-            sound: "drumsound1.mp3",
+            name: "drum1",
+            sound: "drumsound1.wav",
             key: "a",
         },
         {
-            sound: "drumsound2.mp3",
+            name: "drum2",
+            sound: "drumsound2.wav",
             key: "s",
         },
         {
-            sound: "drumsound3.mp3",
+            name: "drum3",
+            sound: "drumsound3.wav",
             key: "d",
         },
         {
-            sound: "drumsound4.mp3",
+            name: "drum4",
+            sound: "drumsound4.wav",
             key: "f",
         },
         {
-            sound: "drumsound5.mp3",
+            name: "drum5",
+            sound: "drumsound5.wav",
             key: "j",
         },
         {
-            sound: "drumsound6.mp3",
+            name: "drum6",
+            sound: "drumsound6.wav",
             key: "k",
         },
         {
-            sound: "drumsound7.mp3",
+            name: "drum7",
+            sound: "drumsound7.wav",
             key: "l",
         },
         {
-            sound: "drumsound8.mp3",
+            name: "drum8",
+            sound: "drumsound8.wav",
             key: "ø",
         },
         {
-            sound: "drumsound9.mp3",
+            name: "drum9",
+            sound: "drumsound9.wav",
             key: "æ",
         },
     ],

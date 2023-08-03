@@ -25,23 +25,34 @@ function createElements(data, type) {
     // }
 
     if (type === "drums") {
-        const div = document.createElement("div");
-        const imgContainer = document.createElement("div");
-        div.classList = "drums";
+        const drumsContainer = document.createElement("div");
+        drumsContainer.classList = "drums";
         const img = document.createElement("img");
         img.src = "images/drumSet.png";
-        const btn = document.createElement("button");
-        btn.classList = "test";
-        btn.dataset.property = "sound1";
-        btn.addEventListener("click", () => {
-            // console.log("AAbbcc");
-            const audioPlayer = new Audio();
-            audioPlayer.src = "sounds/drumsound1.wav";
-            audioPlayer.play();
+        drumsContainer.append(img);
+
+        const buttonsRelContainer = document.createElement("div");
+        buttonsRelContainer.classList = "buttonsRelContainer";
+
+        drum[1].forEach((drum) => {
+            const buttonsRelContainer = document.createElement("div");
+            buttonsRelContainer.classList = `buttonsRelContainer${drum.name}`;
+            const btn = document.createElement("button");
+            btn.classList = drum.name;
+            btn.style.opacity = "0";
+            btn.dataset.property = `images/${drum.sound}`;
+
+            btn.addEventListener("click", () => {
+                // console.log("AAbbcc");
+                const audioPlayer = new Audio();
+                audioPlayer.src = `sounds/${drum.sound}`;
+                audioPlayer.play();
+            });
+
+            buttonsRelContainer.append(btn);
+            drumsContainer.append(buttonsRelContainer);
         });
-        imgContainer.append(img);
-        div.append(imgContainer, btn);
-        return div;
+        return drumsContainer;
     } else {
         const goats = document.createElement("div");
         goats.classList = "goats";
