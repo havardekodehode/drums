@@ -7,56 +7,80 @@ let keys = document.querySelectorAll(".keyboardKey");
 const radioButtons = document.querySelectorAll('input[name="toggle"]');
 
 function createElements(data, type) {
-    // const keyboard = document.createElement("div");
-    // keyboard.classList = "keyboard";
-    // const left = document.createElement("div");
-    // left.classList = "left";
-    // const right = document.createElement("div");
-    // right.classList = "right";
-
-    // const goatContainer = document.createElement("div");
-    // goatContainer.classList = name;
-
-    // function playSound() {
-    //     console.log("ææææææ");
-    //     const audioPlayer = new Audio();
-    //     audioPlayer.scr = "sounds/sound1.mp3";
-    //     audioPlayer.play();
-    // }
-
     if (type === "drums") {
         const drumsContainer = document.createElement("div");
         drumsContainer.classList = "drums";
-        const img = document.createElement("img");
-        img.src = "images/drumSet.png";
-        drumsContainer.append(img);
 
-        const buttonsRelContainer = document.createElement("div");
-        buttonsRelContainer.classList = "buttonsRelContainer";
+        const svg = document.createElement("object");
+        svg.classList = "drumSVG";
+        svg.setAttribute("data", "images/drumSVGtest.svg");
+        svg.type = "image/svg+xml";
+        svg.setAttribute(
+            "onload",
+            "this.parentNode.replaceChild(this.contentDocument.documentElement, this);"
+        );
 
-        drum[1].forEach((drum) => {
-            const buttonsRelContainer = document.createElement("div");
-            buttonsRelContainer.classList = `buttonsRelContainer${drum.name}`;
-            const btn = document.createElement("button");
-            btn.classList = drum.name;
-            btn.style.opacity = "0";
-            btn.dataset.property = `images/${drum.sound}`;
+        drumsContainer.append(svg);
 
-            btn.addEventListener("click", () => {
-                // console.log("AAbbcc");
-                const audioPlayer = new Audio();
-                audioPlayer.src = `sounds/${drum.sound}`;
-                audioPlayer.play();
+        svg.addEventListener("load", () => {
+            const newSVG = document.querySelector(".drums svg");
+            const drums = newSVG.querySelectorAll(".drum");
+            drums.forEach((drum) => {
+                drum.addEventListener("click", () => {
+                    drum.classList.toggle("drumhit");
+                    setTimeout(() => {
+                        drum.classList.toggle("drumhit");
+                    }, 100);
+                    const soundPath = drum.getAttribute("data-sound");
+                    const audioPlayer = new Audio(`sounds/${soundPath}`);
+                    audioPlayer.play();
+                });
             });
-
-            buttonsRelContainer.append(btn);
-            drumsContainer.append(buttonsRelContainer);
+            const keys = document.querySelectorAll(".keyboardKey");
+            // console.log(keys);
+            document.addEventListener("keypress", (e) => {
+                // e.key ===
+                let i = 1;
+                keys.forEach((key) => {
+                    if (key.textContent === e.key) {
+                        const toggleEl = document.querySelectorAll(
+                            `#${key.id}`
+                        );
+                        toggleEl.forEach((el) => {
+                            el.classList.toggle("drumhit");
+                        });
+                        // key.classList.toggle("drumhit");
+                        setTimeout(() => {
+                            toggleEl.forEach((el) => {
+                                // console.log(el);
+                                el.classList.toggle("drumhit");
+                            });
+                            // key.classList.toggle("drumhit");
+                        }, 100);
+                        const soundPath = key.getAttribute("data-sound");
+                        const audioPlayer = new Audio(`sounds/${soundPath}`);
+                        audioPlayer.play();
+                    }
+                });
+            });
+            // keys.forEach((key) => {
+            //     key.addEventListener("keypress", (e) => {
+            //         console.log(e.key);
+            //         key.classList.toggle("drumhit");
+            //         setTimeout(() => {
+            //             key.classList.toggle("drumhit");
+            //         }, 1000);
+            //         const soundPath = key.getAttribute("data-sound");
+            //         const audioPlayer = new Audio(`sounds/${soundPath}`);
+            //         audioPlayer.play();
+            //     });
+            // });
         });
+
         return drumsContainer;
     } else {
         const goats = document.createElement("div");
         goats.classList = "goats";
-
         drum[0].forEach((goat) => {
             const container = document.createElement("div");
             const buttonContainer = document.createElement("div");
@@ -85,27 +109,20 @@ function createKeys() {
     left.classList = "left";
     const right = document.createElement("div");
     right.classList = "right";
-    let keys = document.querySelectorAll(".keyboardKey");
+    // let keys = document.querySelectorAll(".keyboardKey");
 
-    const keyboardLeft = ["a", "s", "d", "f"];
-    const keyboardRight = ["j", "k", "l", "ø", "æ"];
-    keyboardLeft.forEach((key) => {
+    const drumKeys = ["a", "s", "d", "f", "j", "k", "l", "ø", "æ"];
+
+    let index = 1;
+    drumKeys.forEach((key) => {
         const KBKey = document.createElement("div");
         KBKey.classList = "keyboardKey";
-        KBKey.id = `${key}Key`;
-
+        KBKey.id = `drum${index}`;
+        KBKey.dataset.sound = `drumsound${index}.wav`;
         KBKey.append((document.createElement("h1").textContent = key));
-        left.append(KBKey);
+        index <= 4 ? left.append(KBKey) : right.append(KBKey);
+        index++;
     });
-
-    keyboardRight.forEach((key) => {
-        const KBKey = document.createElement("div");
-        KBKey.classList = "keyboardKey";
-
-        KBKey.append((document.createElement("h1").textContent = key));
-        right.append(KBKey);
-    });
-
     keyboard.append(left, right);
     return keyboard;
 }
@@ -113,8 +130,6 @@ function createKeys() {
 function render(data, drumtype) {
     mainEl.innerHTML = "";
     if (drumtype === "drums") {
-        // mainEl.innerHTML = "";
-        console.log(createKeys);
         mainEl.append(createElements(data, drumtype), createKeys());
     } else {
         mainEl.innerHTML = "";
