@@ -1,0 +1,50 @@
+<svg width="160" height="102" viewBox="0 0 160 102" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="64.9708" y="4.04728" width="2" height="30" transform="rotate(-1.35451 64.9708 4.04728)" fill="black"/>
+<rect x="88.9708" y="3.04728" width="2" height="30" transform="rotate(-1.35451 88.9708 3.04728)" fill="black"/>
+<rect x="97.3545" y="32.9335" width="2" height="30" transform="rotate(6.9669 97.3545 32.9335)" fill="black"/>
+<rect x="121.254" y="18.2538" width="2" height="30" transform="rotate(8.9543 121.254 18.2538)" fill="black"/>
+<rect x="126.713" y="46.9343" width="2" height="30" transform="rotate(95.4645 126.713 46.9343)" fill="black"/>
+<rect x="54.1277" y="47.6146" width="2" height="30" transform="rotate(83.2639 54.1277 47.6146)" fill="black"/>
+<rect x="91.9457" y="29.2807" width="2" height="30" transform="rotate(88.1956 91.9457 29.2807)" fill="black"/>
+<rect x="19.3046" y="50.5958" width="2" height="30" transform="rotate(-6.35059 19.3046 50.5958)" fill="black"/>
+<rect x="26.1082" y="18.0797" width="2" height="30" transform="rotate(-6.98629 26.1082 18.0797)" fill="black"/>
+<rect x="53.2651" y="34.1618" width="2" height="30" transform="rotate(-3.90105 53.2651 34.1618)" fill="black"/>
+<g filter="url(#filter0_d_12_39)">
+<ellipse cx="120.464" cy="71.1245" rx="29.5" ry="17.5" transform="rotate(7.33812 120.464 71.1245)" fill="black"/>
+<path d="M149.475 74.8605C148.873 79.5307 145.131 83.3914 139.474 85.8323C133.822 88.2707 126.304 89.269 118.261 88.2333C110.218 87.1975 103.198 84.327 98.349 80.5363C93.4949 76.7417 90.8525 72.0588 91.4539 67.3886C92.0554 62.7184 95.798 58.8577 101.455 56.4168C107.106 53.9783 114.625 52.9801 122.668 54.0158C130.71 55.0516 137.731 57.9221 142.58 61.7128C147.434 65.5073 150.076 70.1903 149.475 74.8605Z" stroke="black" stroke-width="0.5"/>
+</g>
+<path class="drum" id="drum1" data-sound="drumsound1.wav" d="M36.8248 47.4526C37.2742 49.6626 35.7877 52.0948 32.9132 54.2429C30.0491 56.3833 25.8507 58.2049 20.9965 59.1919C16.1424 60.1789 11.566 60.1416 8.09339 59.2896C4.60834 58.4347 2.29005 56.7761 1.84067 54.5661C1.3913 52.356 2.8778 49.9238 5.75222 47.7757C8.61637 45.6353 12.8148 43.8138 17.6689 42.8268C22.5231 41.8398 27.0995 41.8771 30.5721 42.729C34.0571 43.584 36.3754 45.2426 36.8248 47.4526Z" fill="#EBDFD7" stroke="black" stroke-width="0.3"/>
+<path class="drum" id="drum2" data-sound="drumsound2.wav" d="M71.9014 30.3851C72.0548 32.6352 70.26 34.8496 67.1269 36.5991C64.0051 38.3423 59.6028 39.5932 54.6608 39.9302C49.7188 40.2672 45.1875 39.6255 41.8579 38.3223C38.5164 37.0143 36.4375 35.064 36.2841 32.8139C36.1307 30.5639 37.9255 28.3494 41.0585 26.5999C44.1804 24.8567 48.5827 23.6059 53.5247 23.2689C58.4666 22.9319 62.998 23.5735 66.3276 24.8768C69.6691 26.1848 71.7479 28.1351 71.9014 30.3851Z" fill="#EBDFD7" stroke="black" stroke-width="0.3"/>
+<path class="drum" id="drum3" data-sound="drumsound3.wav" d="M117.242 33.5525C117.115 35.8041 115.06 37.779 111.734 39.1264C108.42 40.469 103.896 41.1643 98.9508 40.8858C94.0052 40.6074 89.5884 39.4088 86.4461 37.7026C83.2926 35.9904 81.4717 33.7973 81.5985 31.5456C81.7252 29.2939 83.7808 27.3191 87.1066 25.9717C90.4206 24.629 94.944 23.9338 99.8896 24.2122C104.835 24.4907 109.252 25.6893 112.394 27.3954C115.548 29.1077 117.369 31.3008 117.242 33.5525Z" fill="#EBDFD7" stroke="black" stroke-width="0.3"/>
+<path class="drum" id="drum4" data-sound="drumsound4.wav" d="M157.89 55.4419C157.44 57.6519 155.122 59.3102 151.636 60.1648C148.164 61.0163 143.587 61.0531 138.733 60.0655C133.879 59.0779 129.681 57.2559 126.817 55.1152C123.943 52.9668 122.457 50.5344 122.906 48.3244C123.356 46.1144 125.675 44.4561 129.16 43.6015C132.632 42.75 137.209 42.7132 142.063 43.7008C146.917 44.6884 151.115 46.5104 153.979 48.6511C156.853 50.7995 158.339 53.2319 157.89 55.4419Z" fill="#EBDFD7" stroke="black" stroke-width="0.3"/>
+<g filter="url(#filter1_d_12_39)">
+<ellipse class="drum" id="drum9" data-sound="drumsound9.wav" cx="118.464" cy="76.1245" rx="29.5" ry="17.5" transform="rotate(7.33812 118.464 76.1245)" fill="#EBDFD7"/>
+<path d="M147.475 79.8605C146.873 84.5307 143.131 88.3914 137.474 90.8323C131.822 93.2707 124.304 94.269 116.261 93.2333C108.218 92.1975 101.198 89.327 96.349 85.5363C91.4949 81.7417 88.8525 77.0588 89.4539 72.3886C90.0554 67.7184 93.798 63.8577 99.4551 61.4168C105.106 58.9783 112.625 57.9801 120.668 59.0158C128.71 60.0516 135.731 62.9221 140.58 66.7128C145.434 70.5073 148.076 75.1903 147.475 79.8605Z" stroke="black" stroke-width="0.5"/>
+</g>
+<ellipse class="drum" id="drum5" data-sound="drumsound5.wav" cx="27.6314" cy="18.3691" rx="14.5" ry="6.5" transform="rotate(-12.4239 27.6314 18.3691)" fill="#DB9100"/>
+<ellipse class="drum" id="drum6" data-sound="drumsound6.wav" cx="66.1803" cy="6.7174" rx="11.0411" ry="5.36168" transform="rotate(-1.86094 66.1803 6.7174)" fill="#DB9100"/>
+<ellipse class="drum" id="drum7" data-sound="drumsound7.wav" cx="90.1803" cy="5.7174" rx="11.0411" ry="5.36168" transform="rotate(-1.86094 90.1803 5.7174)" fill="#DB9100"/>
+<ellipse class="drum" id="drum8" data-sound="drumsound8.wav" cx="122.728" cy="18.8376" rx="14.5" ry="6.5" transform="rotate(9.64536 122.728 18.8376)" fill="#DB9100"/>
+<defs>
+<filter id="filter0_d_12_39" x="87.1193" y="53.3599" width="66.6901" height="43.5293" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_12_39"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_12_39" result="shape"/>
+</filter>
+<filter id="filter1_d_12_39" x="85.1193" y="58.3599" width="66.6901" height="43.5293" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_12_39"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_12_39" result="shape"/>
+</filter>
+</defs>
+</svg>

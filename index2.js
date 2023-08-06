@@ -1,6 +1,6 @@
 import { drum } from "./data.js";
 
-document.getElementById("drums").checked = true;
+// document.getElementById("drums").checked = true;
 const mainEl = document.querySelector("main");
 let keys = document.querySelectorAll(".keyboardKey");
 
@@ -13,7 +13,7 @@ function createElements(data, type) {
 
         const svg = document.createElement("object");
         svg.classList = "drumSVG";
-        svg.setAttribute("data", "images/drumSVGtest.svg");
+        svg.setAttribute("data", "images/drumset.svg");
         svg.type = "image/svg+xml";
         svg.setAttribute(
             "onload",
@@ -37,25 +37,21 @@ function createElements(data, type) {
                 });
             });
             const keys = document.querySelectorAll(".keyboardKey");
-            // console.log(keys);
             document.addEventListener("keypress", (e) => {
-                // e.key ===
                 let i = 1;
                 keys.forEach((key) => {
                     if (key.textContent === e.key) {
+                        console.log(key.getAttribute("data-sound"));
                         const toggleEl = document.querySelectorAll(
                             `#${key.id}`
                         );
                         toggleEl.forEach((el) => {
                             el.classList.toggle("drumhit");
                         });
-                        // key.classList.toggle("drumhit");
                         setTimeout(() => {
                             toggleEl.forEach((el) => {
-                                // console.log(el);
                                 el.classList.toggle("drumhit");
                             });
-                            // key.classList.toggle("drumhit");
                         }, 100);
                         const soundPath = key.getAttribute("data-sound");
                         const audioPlayer = new Audio(`sounds/${soundPath}`);
@@ -63,18 +59,6 @@ function createElements(data, type) {
                     }
                 });
             });
-            // keys.forEach((key) => {
-            //     key.addEventListener("keypress", (e) => {
-            //         console.log(e.key);
-            //         key.classList.toggle("drumhit");
-            //         setTimeout(() => {
-            //             key.classList.toggle("drumhit");
-            //         }, 1000);
-            //         const soundPath = key.getAttribute("data-sound");
-            //         const audioPlayer = new Audio(`sounds/${soundPath}`);
-            //         audioPlayer.play();
-            //     });
-            // });
         });
 
         return drumsContainer;
@@ -98,7 +82,6 @@ function createElements(data, type) {
             goats.append(container);
         });
         return goats;
-        // data.forEach((goat) => {});
     }
 }
 
@@ -109,7 +92,6 @@ function createKeys() {
     left.classList = "left";
     const right = document.createElement("div");
     right.classList = "right";
-    // let keys = document.querySelectorAll(".keyboardKey");
 
     const drumKeys = ["a", "s", "d", "f", "j", "k", "l", "ø", "æ"];
 
@@ -137,9 +119,11 @@ function render(data, drumtype) {
     }
 }
 
-for (let radio of radioButtons) {
-    radio.checked ? render(drum, radio.value) : null;
-    radio.addEventListener("change", () =>
-        radio.checked ? render(drum, radio.value) : null
-    );
-}
+// for (let radio of radioButtons) {
+//     radio.checked ? render(drum, radio.value) : null;
+//     radio.addEventListener("change", () =>
+//         radio.checked ? render(drum, radio.value) : null
+//     );
+// }
+
+render(drum, "drums");
